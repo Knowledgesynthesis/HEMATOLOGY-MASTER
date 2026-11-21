@@ -4,82 +4,129 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 220 20% 98%;
+    --foreground: 224 32% 12%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --primary: 221.2 83.2% 53.3%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
-    --radius: 0.5rem;
+    --card-foreground: 224 32% 12%;
+    --primary: 350 72% 44%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 16% 93%;
+    --secondary-foreground: 224 32% 14%;
+    --muted: 220 16% 94%;
+    --muted-foreground: 220 10% 40%;
+    --accent: 220 16% 92%;
+    --accent-foreground: 224 32% 12%;
+    --destructive: 0 72% 46%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 14% 86%;
+    --input: 220 14% 82%;
+    --ring: 350 72% 44%;
+    --peds: 176 72% 30%;
+    --adult: 262 52% 50%;
+    --radius: 0.75rem;
   }
-
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 48%;
+    --background: 224 36% 7%;
+    --foreground: 220 20% 94%;
+    --card: 224 32% 10%;
+    --card-foreground: 220 20% 94%;
+    --primary: 350 85% 62%;
+    --primary-foreground: 224 36% 8%;
+    --secondary: 224 24% 16%;
+    --secondary-foreground: 220 20% 94%;
+    --muted: 224 24% 14%;
+    --muted-foreground: 220 12% 66%;
+    --accent: 224 24% 17%;
+    --accent-foreground: 220 20% 96%;
+    --destructive: 0 70% 56%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 224 20% 20%;
+    --input: 224 20% 24%;
+    --ring: 350 85% 62%;
+    --peds: 172 62% 50%;
+    --adult: 262 80% 74%;
   }
-}
-
-@layer base {
   * {
     @apply border-border;
   }
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 5rem;
+  }
   body {
-    @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
   }
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+@layer components {
+  .table-wrap {
+    @apply my-4 overflow-x-auto rounded-lg border;
+    -webkit-overflow-scrolling: touch;
+  }
+  .table-wrap table {
+    @apply my-0 w-full text-[0.9em];
+  }
+  .prose .table-wrap thead {
+    @apply bg-muted/60;
+  }
+  .prose .table-wrap th,
+  .prose .table-wrap td {
+    @apply px-3 py-2 align-top;
+  }
+  .prose .table-wrap th:first-child,
+  .prose .table-wrap td:first-child {
+    @apply pl-3;
+  }
+  .prose .table-wrap tbody tr:nth-child(even) {
+    @apply bg-muted/25;
+  }
+  .prose :where(ul, ol) {
+    @apply my-2;
+  }
+  .prose :where(li) {
+    @apply my-0.5;
+  }
+  .prose :where(p) {
+    @apply my-2;
+  }
+  .prose :where(h3) {
+    @apply mt-5 mb-2 text-base;
+  }
+  .cite {
+    @apply mx-0.5 inline-flex items-center whitespace-nowrap rounded-md border border-primary/30 bg-primary/10 px-1.5 py-px align-baseline text-[0.72em] font-semibold text-primary no-underline;
+  }
+  .cite:hover {
+    @apply bg-primary/20;
+  }
+  .cite-missing {
+    @apply border-destructive bg-destructive/10 text-destructive;
+  }
+  .pop-chip {
+    @apply mr-1 inline-flex items-center rounded px-1.5 py-px align-middle text-[0.68em] font-bold uppercase tracking-wide;
+  }
+  .pop-peds {
+    @apply bg-peds/15 text-peds;
+  }
+  .pop-adult {
+    @apply bg-adult/15 text-adult;
+  }
+  .pop-both {
+    @apply bg-muted text-muted-foreground;
+  }
+  .field {
+    @apply h-10 w-full rounded-md border border-input bg-background px-3 text-sm shadow-sm transition-colors placeholder:text-muted-foreground/70 focus-visible:ring-2;
+  }
 }
 
-::-webkit-scrollbar-track {
-  @apply bg-muted;
-}
-
-::-webkit-scrollbar-thumb {
-  @apply bg-muted-foreground/30 rounded-md;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-muted-foreground/50;
-}
-
-/* Mobile-first responsive typography */
-html {
-  font-size: 16px;
-}
-
-@media (max-width: 640px) {
-  html {
-    font-size: 14px;
+@media print {
+  header,
+  nav,
+  footer,
+  .no-print {
+    display: none !important;
   }
 }

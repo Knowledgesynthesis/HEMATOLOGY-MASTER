@@ -1,180 +1,203 @@
+import { ArrowRight, Baby, Brain, Sparkles, Stethoscope } from 'lucide-react'
+import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/Card'
-import { Button } from '@/components/ui/Button'
-import {
-  Microscope,
-  Droplets,
-  Activity,
-  Zap,
-  CircleDot,
-  HeartPulse,
-  Dna,
-  Syringe,
-  Baby,
-  FlaskConical,
-  Brain,
-} from 'lucide-react'
+import { FocusToggle } from '@/components/Layout'
+import { PopBadge } from '@/components/PopBadge'
+import { Prose } from '@/components/Prose'
+import { allQuestions, allUpdates, moduleOutline } from '@/content/load'
+import { MODULES, MODULE_BY_ID } from '@/content/modules'
+import { TOOLS } from '@/tools/meta'
+import { cn } from '@/lib/utils'
+import { usePrefs, visibleFor } from '@/store/prefs'
+import { sectionKey, useProgress } from '@/store/progress'
+
+const PEDS_PATH: [string, string][] = [
+  ['foundations', 'normal-values'],
+  ['neonatal', 'hdfn'],
+  ['neonatal', 'neonatal-thrombocytopenia'],
+  ['neonatal', 'vkdb'],
+  ['anemia', 'ida-peds'],
+  ['hemoglobinopathies', 'fever'],
+  ['hemoglobinopathies', 'stroke'],
+  ['platelets', 'itp-peds'],
+  ['leukemia', 'all-peds'],
+  ['bleeding', 'abuse'],
+  ['thrombosis', 'peds-vte-treat'],
+  ['transfusion', 'peds-dosing'],
+]
 
 export function Home() {
-  const modules = [
-    {
-      id: 'foundations',
-      title: 'Prerequisite Physiology',
-      description: 'Hematopoiesis, CBC components, iron physiology, and basic coagulation pathways',
-      icon: Microscope,
-      path: '/modules/foundations',
-      color: 'text-blue-500',
-    },
-    {
-      id: 'anemias',
-      title: 'Anemias',
-      description: 'MCV-based classification, hemolytic vs non-hemolytic, smear patterns, and iron studies',
-      icon: Droplets,
-      path: '/modules/anemias',
-      color: 'text-red-500',
-    },
-    {
-      id: 'leukemias',
-      title: 'Leukemias & WBC Disorders',
-      description: 'Acute and chronic leukemias, MDS, MPN, and benign WBC patterns',
-      icon: Activity,
-      path: '/modules/leukemias',
-      color: 'text-purple-500',
-    },
-    {
-      id: 'lymphomas',
-      title: 'Lymphomas & Plasma Cell Disorders',
-      description: 'Hodgkin vs Non-Hodgkin, MGUS, multiple myeloma, and AL amyloidosis',
-      icon: Zap,
-      path: '/modules/lymphomas',
-      color: 'text-violet-500',
-    },
-    {
-      id: 'platelets',
-      title: 'Platelets & Thrombocytopenia',
-      description: 'Production, destruction, sequestration, and platelet function disorders',
-      icon: CircleDot,
-      path: '/modules/platelets',
-      color: 'text-yellow-500',
-    },
-    {
-      id: 'coagulation',
-      title: 'Coagulation Disorders',
-      description: 'PT/PTT interpretation, hemophilia, von Willebrand, DIC, and mixing studies',
-      icon: HeartPulse,
-      path: '/modules/coagulation',
-      color: 'text-pink-500',
-    },
-    {
-      id: 'hemoglobinopathies',
-      title: 'Hemoglobinopathies',
-      description: 'Sickle cell disease, thalassemias, and electrophoresis interpretation',
-      icon: Dna,
-      path: '/modules/hemoglobinopathies',
-      color: 'text-green-500',
-    },
-    {
-      id: 'transfusion',
-      title: 'Transfusion Medicine',
-      description: 'Blood products, crossmatch, compatibility, and transfusion reactions',
-      icon: Syringe,
-      path: '/modules/transfusion',
-      color: 'text-orange-500',
-    },
-    {
-      id: 'peds',
-      title: 'Pediatric Hematology',
-      description: 'Pediatric iron deficiency, hemoglobinopathies, and immune hemolysis',
-      icon: Baby,
-      path: '/modules/peds',
-      color: 'text-cyan-500',
-    },
-  ]
+  const focus = usePrefs((s) => s.focus)
+  const learned = useProgress((s) => s.learned)
+  const qstats = useProgress((s) => s.questions)
+  const outlines = useMemo(() => Object.fromEntries(MODULES.map((m) => [m.id, moduleOutline(m.id)])), [])
+  const updates = useMemo(() => allUpdates().sort((a, b) => Number(b.year ?? 0) - Number(a.year ?? 0)), [])
+  const qTotal = useMemo(() => allQuestions().length, [])
 
-  const tools = [
-    { title: 'CBC Interpreter', path: '/tools/cbc-interpreter' },
-    { title: 'Anemia Navigator', path: '/tools/anemia-navigator' },
-    { title: 'Hemolysis Panel', path: '/tools/hemolysis-panel' },
-    { title: 'Iron Study Mapper', path: '/tools/iron-study-mapper' },
-    { title: 'Smear Explorer', path: '/tools/smear-explorer' },
-    { title: 'Leukemia Predictor', path: '/tools/leukemia-predictor' },
-    { title: 'Coagulation Interpreter', path: '/tools/coagulation-interpreter' },
-    { title: 'Transfusion Reaction Sorter', path: '/tools/transfusion-reaction-sorter' },
-  ]
+  const totalSections = Object.values(outlines).reduce((a, o) => a + o.length, 0)
+  const learnedCount = Object.keys(learned).length
+  const answered = Object.values(qstats)
+  const accuracy = answered.length ? Math.round((answered.filter((q) => q.last).length / answered.length) * 100) : null
+  const titleOf = (m: string, s: string) => outlines[m]?.find((x) => x.id === s)?.title ?? s
 
   return (
-    <div className="space-y-8">
-      {/* Hero Section */}
-      <div className="text-center space-y-4 py-8">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-          Hematology Master
-        </h1>
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          Everything in hematology, finally simple. From physiology to labs to diagnosis.
-        </p>
-      </div>
-
-      {/* Learning Modules */}
-      <section className="space-y-4">
-        <div className="flex items-center justify-between">
-          <h2 className="text-3xl font-bold tracking-tight">Learning Modules</h2>
+    <div className="mx-auto max-w-6xl space-y-12">
+      <section className="relative overflow-hidden rounded-3xl border bg-gradient-to-br from-primary/15 via-card to-card p-6 sm:p-10">
+        <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-primary/20 blur-3xl" aria-hidden />
+        <div className="relative max-w-3xl">
+          <div className="mb-3 inline-flex items-center gap-2 rounded-full border bg-background/60 px-3 py-1 text-xs font-medium">
+            <span className="h-2 w-2 rounded-full bg-peds" /> Pediatric-first · adult-complete · cited to 2026 guidelines
+          </div>
+          <h1 className="text-3xl font-bold tracking-tight sm:text-5xl">Hematology, from first principles to the bedside.</h1>
+          <p className="mt-4 text-base text-muted-foreground sm:text-lg">
+            {totalSections} sections across {MODULES.length} modules, each tagged <PopBadge pop="peds" /> <PopBadge pop="adult" /> or <PopBadge pop="both" />. Plus {qTotal} exam-style
+            questions, stepwise cases and 11 age-aware clinical tools.
+          </p>
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <Link to="/learn/foundations" className="inline-flex h-11 items-center gap-2 rounded-lg bg-primary px-5 font-medium text-primary-foreground shadow hover:bg-primary/90">
+              Start with Foundations <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link to="/practice" className="inline-flex h-11 items-center gap-2 rounded-lg border bg-background/60 px-5 font-medium hover:bg-accent">
+              <Brain className="h-4 w-4" /> Practice questions
+            </Link>
+          </div>
+          <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+            <span>Focus:</span> <FocusToggle size="sm" />
+          </div>
         </div>
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {modules.map((module) => (
-            <Link key={module.id} to={module.path}>
-              <Card className="h-full transition-all hover:shadow-lg hover:border-primary/50 cursor-pointer">
-                <CardHeader>
-                  <div className="flex items-start justify-between">
-                    <module.icon className={`h-8 w-8 ${module.color}`} />
-                  </div>
-                  <CardTitle className="text-xl">{module.title}</CardTitle>
-                  <CardDescription>{module.description}</CardDescription>
-                </CardHeader>
-              </Card>
+      </section>
+
+      {(learnedCount > 0 || answered.length > 0) && (
+        <section className="grid grid-cols-3 gap-3">
+          {[
+            { label: 'Sections learned', value: `${learnedCount}/${totalSections}` },
+            { label: 'Questions answered', value: `${answered.length}/${qTotal}` },
+            { label: 'Last-attempt accuracy', value: accuracy === null ? '—' : `${accuracy}%` },
+          ].map((s) => (
+            <div key={s.label} className="rounded-xl border bg-card p-4">
+              <div className="text-xl font-bold sm:text-2xl">{s.value}</div>
+              <div className="text-xs text-muted-foreground">{s.label}</div>
+            </div>
+          ))}
+        </section>
+      )}
+
+      {focus !== 'adult' && (
+        <section>
+          <div className="mb-4 flex items-center gap-2">
+            <Baby className="h-5 w-5 text-peds" />
+            <h2 className="text-xl font-bold tracking-tight">Pediatric fast track</h2>
+          </div>
+          <p className="mb-4 text-sm text-muted-foreground">The twelve sections that come up most on pediatric wards, nurseries and clinics.</p>
+          <ol className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+            {PEDS_PATH.map(([m, s], i) => {
+              const done = !!learned[sectionKey(m, s)]
+              return (
+                <li key={m + s} className="min-w-0">
+                  <Link to={`/learn/${m}#${s}`} className={cn('flex min-w-0 items-center gap-3 rounded-xl border p-3 hover:border-peds/60 hover:bg-peds/5', done && 'border-emerald-500/40')}>
+                    <span className={cn('flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold', done ? 'bg-emerald-500/15 text-emerald-500' : 'bg-peds/15 text-peds')}>{i + 1}</span>
+                    <span className="min-w-0">
+                      <span className="block truncate text-sm font-medium">{titleOf(m, s)}</span>
+                      <span className="block text-xs text-muted-foreground">{MODULE_BY_ID[m].short}</span>
+                    </span>
+                  </Link>
+                </li>
+              )
+            })}
+          </ol>
+        </section>
+      )}
+
+      <section>
+        <h2 className="mb-4 text-xl font-bold tracking-tight">Learning modules</h2>
+        <ModuleGrid />
+      </section>
+
+      <section>
+        <div className="mb-4 flex items-center justify-between">
+          <h2 className="text-xl font-bold tracking-tight">Clinical tools</h2>
+          <Link to="/tools" className="text-sm font-medium text-primary hover:underline">
+            All tools →
+          </Link>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {TOOLS.filter((t) => visibleFor(focus, t.pop)).slice(0, 6).map((t) => (
+            <Link key={t.id} to={`/tools/${t.id}`} className="flex gap-3 rounded-xl border bg-card p-4 hover:border-primary/50">
+              <t.icon className="h-5 w-5 shrink-0 text-primary" />
+              <span>
+                <span className="block font-semibold">{t.title}</span>
+                <span className="block text-sm text-muted-foreground">{t.blurb}</span>
+              </span>
             </Link>
           ))}
         </div>
       </section>
 
-      {/* Interactive Tools */}
-      <section className="space-y-4">
-        <div className="flex items-center justify-between">
-          <h2 className="text-3xl font-bold tracking-tight flex items-center gap-2">
-            <FlaskConical className="h-8 w-8 text-primary" />
-            Interactive Tools
-          </h2>
-        </div>
-        <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
-          {tools.map((tool) => (
-            <Link key={tool.path} to={tool.path}>
-              <Button variant="outline" className="w-full justify-start h-auto py-3">
-                {tool.title}
-              </Button>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* Assessment Section */}
-      <section className="space-y-4">
-        <div className="flex items-center justify-between">
-          <h2 className="text-3xl font-bold tracking-tight flex items-center gap-2">
-            <Brain className="h-8 w-8 text-primary" />
-            Test Your Knowledge
-          </h2>
-        </div>
-        <Link to="/assessment">
-          <Card className="transition-all hover:shadow-lg hover:border-primary/50 cursor-pointer">
-            <CardHeader>
-              <CardTitle>Practice Assessment</CardTitle>
-              <CardDescription>
-                Test your understanding with case-based questions and pattern recognition exercises.
-                Session-only results, no tracking.
-              </CardDescription>
-            </CardHeader>
-          </Card>
+      <section className="grid gap-4 lg:grid-cols-2">
+        <Link to="/cases" className="rounded-2xl border bg-card p-6 hover:border-primary/50">
+          <Stethoscope className="h-6 w-6 text-primary" />
+          <h3 className="mt-3 text-lg font-semibold">Clinical cases</h3>
+          <p className="mt-1 text-sm text-muted-foreground">Stepwise vignettes: decide, see the result, decide again. Mostly pediatric, with key adult emergencies.</p>
         </Link>
+        <div className="rounded-2xl border bg-card p-6">
+          <div className="flex items-center gap-2">
+            <Sparkles className="h-5 w-5 text-sky-500" />
+            <h3 className="text-lg font-semibold">What’s new</h3>
+            <Link to="/whats-new" className="ml-auto text-sm font-medium text-primary hover:underline">
+              All {updates.length} →
+            </Link>
+          </div>
+          <ul className="mt-3 space-y-3">
+            {updates.slice(0, 4).map((u) => (
+              <li key={u.moduleId + u.sectionId + u.title}>
+                <Link to={`/learn/${u.moduleId}#${u.sectionId}`} className="block rounded-lg p-2 hover:bg-accent">
+                  <div className="flex items-center gap-2 text-sm font-medium">
+                    {u.year && <span className="rounded bg-sky-500/15 px-1.5 text-[11px] font-bold text-sky-500">{u.year}</span>}
+                    {u.title}
+                  </div>
+                  <Prose html={u.html} className="line-clamp-2 text-xs prose-p:my-0 [&_*]:text-xs" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
+    </div>
+  )
+}
+
+export function ModuleGrid() {
+  const learned = useProgress((s) => s.learned)
+  const focus = usePrefs((s) => s.focus)
+  return (
+    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {MODULES.map((m, i) => {
+        const outline = moduleOutline(m.id)
+        const visible = outline.filter((s) => visibleFor(focus, s.pop))
+        const done = outline.filter((s) => learned[sectionKey(m.id, s.id)]).length
+        const pct = outline.length ? Math.round((done / outline.length) * 100) : 0
+        const peds = outline.filter((s) => s.pop === 'peds').length
+        const adult = outline.filter((s) => s.pop === 'adult').length
+        return (
+          <Link key={m.id} to={`/learn/${m.id}`} className="group flex flex-col rounded-2xl border bg-card p-5 transition-all hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md">
+            <div className="flex items-start justify-between">
+              <m.icon className={cn('h-7 w-7', m.accent)} />
+              <span className="text-xs font-semibold text-muted-foreground">{String(i + 1).padStart(2, '0')}</span>
+            </div>
+            <h3 className="mt-3 font-semibold leading-snug">{m.title}</h3>
+            <p className="mt-1 line-clamp-3 flex-1 text-sm text-muted-foreground">{m.blurb}</p>
+            <div className="mt-4 flex items-center gap-2 text-[11px] text-muted-foreground">
+              <span>{visible.length} sections</span>
+              <span className="text-peds">● {peds}</span>
+              <span className="text-adult">● {adult}</span>
+              <span className="ml-auto">{pct}%</span>
+            </div>
+            <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-muted">
+              <div className="h-full rounded-full bg-emerald-500" style={{ width: `${pct}%` }} />
+            </div>
+          </Link>
+        )
+      })}
     </div>
   )
 }

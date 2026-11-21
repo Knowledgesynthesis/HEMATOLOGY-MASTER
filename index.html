@@ -1,11 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Hematology Master - Everything blood, from basics to patterns. A comprehensive hematology learning platform." />
-    <title>Hematology Master</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Hematology Master: pediatric-first, evidence-based hematology</title>
+    <meta name="description" content="Pediatric-first, adult-complete hematology: 12 cited modules, stepwise cases, 120+ questions and age-aware bedside tools (CBC, iron, hemolysis, coagulation, transfusion, scores)." />
+    <meta name="theme-color" content="#0b1020" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <script>
+      try {
+        var t = JSON.parse(localStorage.getItem('hm-prefs') || '{}').state?.theme || 'dark'
+        var d = t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches)
+        document.documentElement.classList.toggle('dark', d)
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>
