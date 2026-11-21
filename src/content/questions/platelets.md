@@ -69,3 +69,48 @@ A 3-month-old has a rapidly enlarging, firm, violaceous thigh mass, platelets 9 
 - [ ] Observation; it involutes like infantile hemangioma
 > Kasabach-Merritt phenomenon from kaposiform hemangioendothelioma responds to sirolimus. Propranolol is for infantile hemangioma. Platelet transfusion can worsen lesion swelling, so reserve it for bleeding or surgery.
 :::
+
+:::check peds #chronic-itp-peds sec=itp-peds refs=ash-itp-2019
+A 13-year-old has had ITP for 14 months, with platelets 5–15 × 10⁹/L, recurrent epistaxis and heavy menses despite repeated steroid and IVIG courses. What does ASH suggest next?
+- [ ] Splenectomy
+- [x] A thrombopoietin receptor agonist (eltrombopag or romiplostim)
+- [ ] Long-term daily prednisone
+- [ ] Rituximab before any other option
+> For children with chronic ITP who need treatment, ASH suggests TPO-RAs over rituximab and splenectomy. Also manage heavy menses hormonally, and screen for secondary causes (SLE, immunodeficiency).
+:::
+
+:::check peds #anti-d sec=itp-peds refs=ash-itp-2019
+Which child with ITP is an appropriate candidate for anti-D immunoglobulin?
+- [ ] Rh(D)-negative child with an intact spleen
+- [x] Rh(D)-positive, DAT-negative child with an intact spleen and normal hemoglobin
+- [ ] Rh(D)-positive child after splenectomy
+- [ ] Child with Evans syndrome and active hemolysis
+> Anti-D works by coating D-positive RBCs, which saturate splenic Fc receptors. It needs a spleen and D-positive cells. It causes hemolysis (boxed warning for intravascular hemolysis), so avoid it with anemia or existing hemolysis.
+:::
+
+:::check peds #kawasaki-plt sec=thrombocytosis
+In week 3 of Kawasaki disease, a 3-year-old has platelets of 860 × 10⁹/L. What is the significance?
+- [ ] A new primary thrombocythemia needing JAK2 testing
+- [x] An expected reactive thrombocytosis of the subacute phase; continue Kawasaki management
+- [ ] An indication to stop aspirin
+- [ ] Platelet apheresis
+> Thrombocytosis peaking in weeks 2–3 is typical of Kawasaki disease. Aspirin is used for the vasculitis and coronary risk, not because of the platelet count itself.
+:::
+
+:::check peds #myh9 sec=inherited
+A 16-year-old with "chronic ITP" since infancy has not responded to IVIG or steroids. Platelets are 45 × 10⁹/L and as large as red cells, neutrophils contain Döhle-like inclusions, and she has mild hearing loss. What is the likely diagnosis?
+- [ ] Refractory ITP; proceed to splenectomy
+- [x] MYH9-related disease
+- [ ] Wiskott-Aldrich syndrome
+- [ ] Gray platelet syndrome
+> Giant platelets, Döhle-like inclusions, hearing loss, nephritis and cataracts mark MYH9-RD. Recognizing it avoids futile immunosuppression and splenectomy. Eltrombopag can raise counts before surgery.
+:::
+
+:::check peds #glanzmann sec=inherited
+A 6-year-old from a consanguineous family has lifelong severe nosebleeds and gum bleeding. Platelet count and size are normal. Aggregation is absent with ADP, collagen and epinephrine but normal with ristocetin. What is the diagnosis?
+- [ ] Bernard-Soulier syndrome
+- [ ] von Willebrand disease
+- [x] Glanzmann thrombasthenia
+- [ ] Storage pool disorder
+> Absent GPIIb/IIIa means no fibrinogen bridging with any agonist. Ristocetin agglutination needs only VWF–GPIb, so it is preserved. Treat with antifibrinolytics, platelets (HLA-matched if alloimmunized), or rFVIIa.
+:::

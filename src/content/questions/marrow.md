@@ -69,3 +69,57 @@ A 7-year-old in ALL induction has T 38.6 °C and ANC 0.1 × 10⁹/L. She is hemo
 - [ ] Wait for blood culture results
 > The 2023 pediatric guideline recommends empiric antipseudomonal β-lactam monotherapy within 1 hour. Add other agents only for instability, resistance concerns or specific indications.
 :::
+
+:::check peds #danc sec=neutropenia refs=duffy-null-2023
+A healthy 15-year-old Black adolescent has an ANC of 1.1 × 10⁹/L on a sports physical. There is no history of serious infection, and other counts are normal. What is the most likely explanation?
+- [ ] Severe congenital neutropenia
+- [x] Duffy-null–associated neutrophil count (benign; no excess infection risk)
+- [ ] Early leukemia
+- [ ] Autoimmune neutropenia requiring G-CSF
+> Duffy-null (Fy a−b−) people, common in African ancestry, have lower circulating ANCs with normal marrow reserve. Testing Duffy phenotype avoids unnecessary marrow exams and withheld chemotherapy doses.
+:::
+
+:::check peds #scn sec=neutropenia
+A 3-month-old has omphalitis, a perianal abscess and persistent ANC < 0.2 × 10⁹/L on repeated counts. Which statement is correct?
+- [ ] Likely autoimmune neutropenia; observe
+- [x] Severe congenital neutropenia (e.g., ELANE): G-CSF, genetic testing, and lifelong surveillance for MDS/AML
+- [ ] Cyclic neutropenia; repeat CBC in 3 weeks
+- [ ] Duffy-null neutrophil count
+> Persistent profound neutropenia with deep bacterial infections from early infancy is SCN. G-CSF reduces infections. Rising G-CSF requirements or new cytogenetic changes prompt HSCT.
+:::
+
+:::check peds #dkc sec=inherited-bmf
+A 9-year-old has thrombocytopenia, dystrophic nails, oral leukoplakia and lacy reticulated skin pigmentation. Which test is most useful?
+- [ ] Chromosome breakage (DEB)
+- [x] Lymphocyte telomere length by flow-FISH
+- [ ] Erythrocyte ADA
+- [ ] Fecal elastase
+> This triad is dyskeratosis congenita, a telomere biology disorder. It affects transplant conditioning, donor choice, and screening for pulmonary fibrosis, liver disease and cancer.
+:::
+
+:::check peds #lch-di sec=lch
+A 3-year-old has a painless "punched-out" skull lesion, a scaly scalp rash and new excessive thirst and urination. What is the most likely diagnosis?
+- [ ] Neuroblastoma
+- [x] Langerhans cell histiocytosis with central diabetes insipidus
+- [ ] Osteomyelitis
+- [ ] Hyperparathyroidism
+> LCH (often BRAF V600E) involves bone, skin and the pituitary stalk. Confirm DI with water deprivation and MRI. Multisystem disease needs systemic therapy.
+:::
+
+:::check peds #ebv-young sec=lymphocytosis
+A 3-year-old has fever, exudative pharyngitis, posterior cervical nodes, splenomegaly and atypical lymphocytes. The heterophile (Monospot) test is negative. What is the best next test?
+- [ ] Repeat Monospot in 1 week
+- [x] EBV-specific serology (VCA IgM/IgG, EBNA)
+- [ ] Bone marrow aspirate
+- [ ] Flow cytometry for leukemia
+> Heterophile antibodies are often absent in children under 4. EBV-specific serology confirms the diagnosis.
+:::
+
+:::check peds #fn-96h sec=febrile-neutropenia refs=fn-peds-2023
+A child on AML chemotherapy has had fever for 4 days despite broad-spectrum antibiotics. Cultures are negative and the ANC is 0. What should happen next?
+- [ ] Stop antibiotics; it's drug fever
+- [x] Evaluate for invasive fungal infection (chest CT ± other imaging) and start empiric antifungal therapy
+- [ ] Give G-CSF only
+- [ ] Repeat cultures and change nothing
+> Persistent fever beyond ~96 h in high-risk neutropenia (AML, relapsed ALL, HSCT) warrants a fungal work-up and empiric antifungal therapy.
+:::

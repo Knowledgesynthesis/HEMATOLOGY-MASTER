@@ -96,3 +96,66 @@ A 22-year-old with sickle cell trait has painless gross hematuria and flank pain
 - [ ] Nephrolithiasis
 > Renal medullary carcinoma is an aggressive tumor almost exclusive to people with sickle trait or SCD. Hematuria in trait warrants imaging (CT/MRI) rather than assuming papillary necrosis.
 :::
+
+:::check peds #voc-timing sec=voc refs=ash-scd-pain-2020
+A 9-year-old with HbSS arrives at the ED with severe leg pain typical of prior crises. Which statement reflects guideline-based care?
+- [ ] Wait for labs to confirm a crisis before giving opioids
+- [x] Give analgesia within 60 minutes of arrival using the individualized pain plan, reassess every 30–60 minutes, and add NSAIDs if renal function allows
+- [ ] Give normal saline boluses of 20 mL/kg ×3
+- [ ] Oxygen for all patients regardless of SpO₂
+> ASH 2020 and NHLBI 2014 stress rapid, individualized analgesia. No lab test confirms or excludes a VOC. Keep fluids near euvolemia.
+:::
+
+:::check peds #voc-oxygen sec=voc refs=nhlbi-scd-2014
+A child in a VOC has SpO₂ 97% on room air and no respiratory symptoms. Should oxygen be given?
+- [ ] Yes, to prevent sickling
+- [x] No; oxygen without hypoxemia doesn't help (give if SpO₂ < 95%)
+- [ ] Yes, at 15 L via non-rebreather
+- [ ] Only with incentive spirometry
+> Routine oxygen without hypoxemia doesn't shorten crises and can suppress erythropoiesis. Monitor for ACS instead.
+:::
+
+:::check peds #sc-sequestration sec=sequestration refs=nhlbi-scd-2014
+A 12-year-old with HbSC has sudden left upper quadrant pain, Hb 6.9 g/dL (baseline 10.8) and a newly enlarged spleen. What is the most likely diagnosis?
+- [ ] Splenic sequestration is impossible after age 5
+- [x] Acute splenic sequestration, which occurs later in HbSC and HbS/β⁺ because the spleen persists
+- [ ] Aplastic crisis
+- [ ] Renal medullary carcinoma
+> Autosplenectomy happens early in HbSS but often not in HbSC or HbS/β⁺. The spleen can sequester in older children and adults, and even at altitude.
+:::
+
+:::check peds #hu-escalation sec=hydroxyurea refs=nhlbi-scd-2014
+While escalating hydroxyurea in a 7-year-old with HbSS, which counts allow a further dose increase?
+- [ ] ANC ≥ 0.5 and platelets ≥ 20 × 10⁹/L
+- [x] ANC ≥ 2.0 (≥ 1.25 in young children) and platelets ≥ 80 × 10⁹/L
+- [ ] Hb ≥ 12 g/dL
+- [ ] Any counts, as long as HbF is rising
+> Escalate by ~5 mg/kg/day every 8 weeks toward MTD (max 35 mg/kg/day) while keeping these thresholds. A rising MCV and HbF signal adherence.
+:::
+
+:::check peds #sci-mri sec=stroke refs=ash-scd-cns-2020
+A 7-year-old with HbSS has normal TCD velocities but is struggling at school. What does ASH 2020 suggest?
+- [ ] Nothing; normal TCD excludes cerebrovascular disease
+- [x] Screening MRI (without sedation) for silent cerebral infarcts, plus neurocognitive assessment and school support
+- [ ] Start aspirin
+- [ ] Annual CT head
+> Silent cerebral infarcts affect about a third of children with HbSS by adolescence. TCD screens large-vessel risk only. If infarcts are present, chronic transfusion reduced recurrence (SIT trial).
+:::
+
+:::check peds #hbh-crisis sec=alpha-thal refs=tif-2021
+A 4-year-old with HbH disease (−−/−α) has fever from a viral illness. Hb has fallen from 8.5 to 5.8 g/dL with jaundice. What is the management?
+- [ ] Hydroxyurea
+- [x] Transfuse, treat the infection, and avoid oxidant drugs
+- [ ] Splenectomy now
+- [ ] Iron supplementation
+> Infection and oxidant stress precipitate hemolytic crises in HbH disease. HbH–Constant Spring is more severe. Iron overload can occur even without transfusion, so don't give empiric iron.
+:::
+
+:::check peds #chelation-start sec=beta-thal refs=tif-2021
+When should iron chelation usually start in a child with transfusion-dependent thalassemia?
+- [ ] At the first transfusion
+- [x] After ~10–20 transfusions or when ferritin is persistently > 1,000 ng/mL
+- [ ] Only once cardiac T2* is < 10 ms
+- [ ] At age 18
+> Waiting for organ damage is too late. Follow ferritin every 3 months, liver iron by MRI yearly, and cardiac T2* from ~age 10.
+:::

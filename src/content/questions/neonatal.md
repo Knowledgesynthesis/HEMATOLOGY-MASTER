@@ -60,3 +60,57 @@ At 18 hours old, a term infant develops rapidly spreading purpuric skin lesions,
 - [ ] Recombinant FVIIa
 > Neonatal purpura fulminans from homozygous protein C deficiency needs immediate replacement: protein C concentrate if available, otherwise FFP 10–20 mL/kg every 6–12 h. Long-term anticoagulation and/or replacement follow.
 :::
+
+:::check peds #abo-dat-neg sec=hdfn refs=bsh-neonatal-2016,aap-bili-2022
+A group A infant of a group O mother is jaundiced at 20 hours. Spherocytes are present, retic 10%, and the DAT is negative. What is the most likely diagnosis?
+- [ ] ABO HDFN is excluded by the negative DAT
+- [x] ABO HDFN remains likely; manage by hour-specific bilirubin curves with isoimmune hemolysis as a risk factor
+- [ ] Rh disease
+- [ ] Gilbert syndrome
+> A and B antigens are weakly expressed on neonatal RBCs, so the DAT is often weak or negative in ABO HDFN. HS is the main alternative; family history and later EMA testing help.
+:::
+
+:::check peds #itp-mother-baby sec=neonatal-thrombocytopenia refs=nathan-oski
+A well term baby is born to a mother with chronic ITP. Cord platelets are 110 × 10⁹/L. What monitoring is needed?
+- [ ] None; a normal-ish cord count excludes problems
+- [x] Daily platelet counts for the first 3–5 days, because the nadir usually occurs on days 2–5
+- [ ] Weekly counts for 6 months
+- [ ] Head MRI regardless of count
+> Maternal IgG keeps lowering the count after birth, and splenic function matures. Treat with IVIG if < 30 × 10⁹/L or bleeding. Get a head ultrasound if the count is severely low.
+:::
+
+:::check peds #top-week3 sec=preterm-thresholds refs=top
+A 28-day-old ex-26-week infant is on room air, growing, and has Hb 7.5 g/dL. Using TOP restrictive thresholds, what do you do?
+- [ ] Transfuse 15 mL/kg
+- [x] No transfusion (threshold 7.0 g/dL from week 3 without respiratory support)
+- [ ] Start erythropoietin
+- [ ] Transfuse only if lactate is high
+> TOP restrictive thresholds from week 3 are 8.5 g/dL with respiratory support and 7.0 without. Higher thresholds didn't improve death or neurodevelopmental outcomes.
+:::
+
+:::check peds #direct-bili sec=hyperbilirubinemia refs=aap-bili-2022
+A 3-week-old is still jaundiced. Total bilirubin 9.8 mg/dL, direct bilirubin 2.1 mg/dL; stools are pale. What is the next step?
+- [ ] Phototherapy and recheck in 1 week
+- [ ] Reassure: breast-milk jaundice
+- [x] Urgent cholestasis evaluation (ultrasound, hepatology) for biliary atresia, and check vitamin K status
+- [ ] Switch to formula
+> Direct bilirubin > 1.0 mg/dL is abnormal at any age. Biliary atresia outcomes depend on early Kasai portoenterostomy. Cholestatic infants are also at risk of late VKDB.
+:::
+
+:::check peds #rhig sec=hdfn
+A D-negative mother with a negative antibody screen delivers a D-positive baby. What prevents sensitization?
+- [x] Anti-D immunoglobulin (RhIG) within 72 h of delivery, dosed by fetal bleed size
+- [ ] IVIG to the baby
+- [ ] Nothing; sensitization only matters for ABO
+- [ ] Exchange transfusion for the baby
+> RhIG at ~28 weeks and after delivery of a D-positive infant (plus after sensitizing events) has made Rh disease rare. Quantify large fetomaternal hemorrhages to adjust the dose.
+:::
+
+:::check peds #pet-volume sec=polycythemia refs=nathan-oski
+A symptomatic 3-kg term infant has a venous Hct of 72%. You plan a partial exchange to Hct 55% (blood volume 85 mL/kg). About what volume is exchanged?
+- [ ] 20 mL
+- [x] 60 mL
+- [ ] 120 mL
+- [ ] 255 mL
+> Volume = BV × (observed − target) / observed = 255 × 17/72 ≈ 60 mL, replaced with normal saline. Evidence for long-term benefit is limited, so reserve it for symptomatic infants.
+:::

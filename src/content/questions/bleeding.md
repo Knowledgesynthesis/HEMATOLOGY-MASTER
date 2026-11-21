@@ -69,3 +69,48 @@ A 3-year-old with a newly diagnosed Wilms tumor has a prolonged aPTT and low VWF
 - [ ] Factor XII deficiency
 > Wilms tumor (hyaluronic acid, adsorption of VWF) is a recognized cause of acquired VWS in children. Plan perioperative VWF replacement or DDAVP with hematology. Levels normalize after tumor removal.
 :::
+
+:::check peds #hemo-delivery sec=hemophilia refs=wfh-2020
+A woman who is a known carrier of severe hemophilia A is in labor with a male fetus. Which plan is recommended?
+- [ ] Routine vacuum-assisted delivery is fine
+- [x] Avoid vacuum and forceps, send cord blood for FVIII, avoid heel sticks and IM injections until the result is known, and consider a head ultrasound
+- [ ] Mandatory elective cesarean in all cases
+- [ ] Give the newborn FFP prophylactically
+> Instrumental delivery raises the risk of neonatal ICH and cephalohematoma. Cord FVIII is reliable at birth. Cesarean isn't mandatory; plan delivery with hematology and obstetrics.
+:::
+
+:::check peds #hemo-b-newborn sec=hemophilia refs=wfh-2020
+A newborn boy whose maternal uncle has mild hemophilia B has a cord FIX of 18%. How do you interpret this?
+- [x] Not diagnostic: FIX is physiologically low in neonates; retest at ~6 months
+- [ ] Confirms mild hemophilia B
+- [ ] Excludes hemophilia B
+- [ ] Indicates vitamin K deficiency
+> FIX is vitamin K–dependent and low at birth, so mild hemophilia B can't be reliably diagnosed in the newborn period. Severe deficiency (< 1%) is identifiable. Genetic testing can resolve it sooner if the familial variant is known.
+:::
+
+:::check peds #vwd-2n sec=vwd refs=vwd-dx-2021
+A 10-year-old girl with bleeding after tonsillectomy has FVIII 0.18 IU/mL, with normal VWF antigen and activity. Her father and brothers are unaffected. What is the most likely diagnosis?
+- [ ] Hemophilia A carrier only
+- [x] Type 2N von Willebrand disease
+- [ ] Type 1 VWD
+- [ ] Factor XI deficiency
+> In type 2N, VWF can't bind and protect FVIII, which mimics mild hemophilia A but is autosomal recessive. Confirm with a VWF:FVIII binding assay. It matters because FVIII concentrate alone has a short half-life; use VWF-containing concentrate.
+:::
+
+:::check peds #fxi-tonsil sec=rare-factors refs=wfh-2020
+A 7-year-old of Ashkenazi Jewish ancestry, scheduled for tonsillectomy, has aPTT 52 s that corrects on mixing. FXI is 22%. Which plan is most appropriate?
+- [ ] Proceed without preparation; FXI deficiency doesn't bleed
+- [x] Perioperative tranexamic acid ± FXI concentrate or plasma, planned with hematology (tonsillar bed is a high-fibrinolysis site)
+- [ ] Cancel surgery permanently
+- [ ] DDAVP alone
+> Bleeding in FXI deficiency correlates poorly with level but is concentrated at fibrinolytically active sites (mouth, nose, urinary tract). Antifibrinolytics are central.
+:::
+
+:::check peds #isth-bat-child sec=history refs=isth-bat
+What ISTH-BAT score is considered abnormal in children?
+- [ ] ≥ 1
+- [x] ≥ 3
+- [ ] ≥ 6
+- [ ] ≥ 10
+> Abnormal cut-offs are ≥ 3 in children, ≥ 4 in adult men and ≥ 6 in adult women. A validated tool standardizes the bleeding history, which predicts disease better than screening labs.
+:::

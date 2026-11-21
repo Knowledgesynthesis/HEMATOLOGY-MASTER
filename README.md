@@ -10,8 +10,8 @@ Pediatric-first, adult-complete hematology for trainees and clinicians. Everythi
 |---|---|
 | **12 modules, 109 sections** | Foundations → neonatal → anemia → hemolysis → sickle cell/thalassemia → marrow/WBC → leukemia → lymphoma/plasma cells → platelets → bleeding → thrombosis → transfusion |
 | **Population tags** | Every section, question and case is tagged **Peds**, **Adult** or **Peds + Adult**. A global focus toggle filters them. |
-| **124 questions** | Single-best-answer with explanations. Practice or exam mode, filtered by module or population. “Missed last time” drills. |
-| **19 stepwise cases** | Decide → see the result → decide again (14 pediatric). |
+| **192 questions** (140 pediatric) | Single-best-answer with explanations. Practice or exam mode, filtered by module or population. “Missed last time” drills. |
+| **31 stepwise cases** | Decide → see the result → decide again (26 pediatric, 88 decision points). |
 | **11 tools** | Age/sex-aware CBC interpreter, anemia work-up, iron studies (AAP 2026/WHO), hemolysis, smear atlas + flashcards, leukemia red flags, coagulation, transfusion reactions, newborn screen decoder, scores (4Ts, PLASMIC, ISTH DIC, HLH-2004), bedside calculators. |
 | **Evidence** | 116 references with links. Inline citations, “What’s new” timeline built from `:::update` callouts. |
 | **Offline** | Installable PWA; progress is stored locally in the browser only. |

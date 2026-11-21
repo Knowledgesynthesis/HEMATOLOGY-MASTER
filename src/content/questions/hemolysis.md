@@ -60,3 +60,57 @@ A 29-year-old has DAT-negative hemolysis, pancytopenia and hepatic vein thrombos
 - [ ] Ham test
 > Hemolysis, marrow failure and unusual-site thrombosis is the PNH triad. High-sensitivity flow cytometry is the standard (the Ham test is obsolete). JAK2 is worth checking in Budd-Chiari but doesn't explain hemolysis.
 :::
+
+:::check peds #hs-splenectomy sec=hs refs=bsh-hs-2011
+A 4-year-old with severe HS needs transfusions every 6–8 weeks and has poor growth. Which surgical approach is preferred at this age?
+- [ ] Total splenectomy now
+- [x] Partial (subtotal) splenectomy, or defer total splenectomy until ≥ 6 years, with vaccination first
+- [ ] Cholecystectomy only
+- [ ] No surgery; transfuse indefinitely
+> Total splenectomy before ~6 years carries a higher risk of overwhelming post-splenectomy infection. Partial splenectomy reduces hemolysis while preserving some immune function.
+:::
+
+:::check peds #hs-sibling-parvo sec=hs refs=bsh-hs-2011
+Two brothers with HS live together. One has a slapped-cheek rash. Which test best detects early aplastic crisis in the other?
+- [ ] Bilirubin
+- [ ] Haptoglobin
+- [x] Reticulocyte count (with Hb)
+- [ ] Osmotic fragility
+> Parvovirus B19 abolishes reticulocyte production first. Retic falling toward 0 with a dropping Hb is the warning sign; plan for transfusion.
+:::
+
+:::check peds #g6pd-newborn sec=g6pd refs=aap-bili-2022
+Under AAP 2022 guidance, when should G6PD activity be measured in a jaundiced newborn?
+- [ ] In every newborn before discharge
+- [x] When the infant is on phototherapy and family history or ancestry suggests G6PD deficiency, or the response to phototherapy is poor
+- [ ] Only if hemoglobinuria occurs
+- [ ] Never in the newborn period
+> G6PD deficiency is a neurotoxicity risk factor that lowers phototherapy and exchange thresholds. Bilirubin can rise rapidly without obvious anemia.
+:::
+
+:::check peds #anti-fh sec=hus
+A 12-year-old has thrombotic microangiopathy with AKI, no diarrhea, a negative STEC test, ADAMTS13 of 65%, and high-titer anti-factor H antibodies. What is the treatment?
+- [ ] Supportive care only, as for STEC-HUS
+- [x] Complement inhibition (eculizumab/ravulizumab), plus immunosuppression to suppress the autoantibody (± plasma exchange)
+- [ ] Caplacizumab
+- [ ] Antibiotics for occult STEC
+> Anti-factor H antibody HUS is a complement-mediated (atypical) HUS that peaks in late childhood and adolescence. Normal ADAMTS13 excludes TTP.
+:::
+
+:::check peds #cttp sec=ttp refs=radamts13-2024
+A 6-year-old has had recurrent episodes of thrombocytopenia with schistocytes since severe neonatal jaundice. ADAMTS13 activity is < 5% with no inhibitor. What is the diagnosis and treatment?
+- [ ] Immune TTP: plasma exchange, steroids, caplacizumab
+- [x] Congenital TTP: prophylactic replacement with recombinant ADAMTS13 (or plasma)
+- [ ] ITP: IVIG
+- [ ] aHUS: eculizumab
+> Absent ADAMTS13 without an inhibitor means biallelic ADAMTS13 mutations (Upshaw-Schulman). Recombinant ADAMTS13 has been approved since 2023 for prophylaxis and on-demand therapy.
+:::
+
+:::check peds #wilson sec=approach
+A 15-year-old has a DAT-negative hemolytic anemia, elevated transaminases and a low alkaline phosphatase. The smear shows no specific morphology. Which test is most important?
+- [ ] G6PD activity
+- [x] Ceruloplasmin and 24-hour urine copper (Wilson disease)
+- [ ] Osmotic fragility
+- [ ] Cold agglutinin titer
+> Wilson disease can present as acute Coombs-negative hemolysis with liver injury in adolescents. A low ALP-to-bilirubin ratio is a clue to fulminant presentation. Missing it can be fatal.
+:::

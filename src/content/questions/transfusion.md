@@ -69,3 +69,57 @@ A non-bleeding patient with cirrhosis (INR 1.8, platelets 78 × 10⁹/L) needs a
 - [ ] Vitamin K 10 mg IV and delay 24 h
 > INR doesn't predict procedural bleeding in cirrhosis (rebalanced hemostasis). Prophylactic plasma adds volume and risk without benefit for low-risk procedures like paracentesis.
 :::
+
+:::check peds #irradiate-exchange sec=products refs=bsh-neonatal-2016
+A term neonate with Rh HDFN needs a double-volume exchange transfusion. Which red cell product is appropriate?
+- [ ] Standard red cells in additive solution, any age
+- [x] Irradiated, fresh (< 5 days), CMV-safe red cells reconstituted with plasma to Hct ~0.5–0.6
+- [ ] Washed group AB red cells
+- [ ] Granulocyte-rich whole blood
+> Exchange transfusion is an indication for irradiation (TA-GVHD risk). Fresh units limit potassium load. Red cells must be compatible with maternal antibody (D-negative for Rh HDFN).
+:::
+
+:::check peds #lp-platelets sec=platelet-thresholds refs=aabb-plt-2025
+A 5-year-old with ALL in induction has platelets 17 × 10⁹/L and needs a scheduled lumbar puncture with intrathecal chemotherapy. What do AABB/ICTMG 2025 suggest?
+- [ ] No transfusion; any count is fine
+- [x] Transfuse platelets before the LP (threshold 20 × 10⁹/L)
+- [ ] Transfuse to > 100 × 10⁹/L
+- [ ] Give FFP instead
+> The 2025 guideline suggests a 20 × 10⁹/L threshold for LP, which avoids over-transfusion. Traumatic LPs with circulating blasts worsen prognosis, so the procedure should be done by an experienced operator.
+:::
+
+:::check peds #infant-crossmatch sec=compatibility refs=bsh-neonatal-2016
+A 6-week-old needs a second red cell transfusion during the same admission. The initial screen (infant and mother) showed no unexpected antibodies. What testing is needed?
+- [ ] Full crossmatch before every unit
+- [x] No repeat crossmatch during the admission (infants < 4 months rarely form alloantibodies); give ABO-compatible (often group O) units
+- [ ] Daily antibody screens
+- [ ] DAT before each unit
+> Infants under 4 months don't make ABO antibodies or new alloantibodies, so repeat testing is minimized. Maternal IgG anti-A/anti-B must be considered when selecting non-O units.
+:::
+
+:::check peds #peds-txa sec=massive refs=crash-2
+A 25-kg child with hemorrhagic shock after a fall arrives 1 hour after injury. Which tranexamic acid regimen is appropriate?
+- [ ] 1 g bolus regardless of weight
+- [x] 15 mg/kg (≈ 375 mg) loading dose, then 2 mg/kg/h infusion
+- [ ] No TXA in children
+- [ ] TXA only after 3 hours
+> TXA works best within 3 hours of injury. Pediatric dosing is weight-based. Activate the massive transfusion protocol at > 40 mL/kg of products, and remember calcium and warming.
+:::
+
+:::check peds #hyperk-neonate sec=products refs=bsh-neonatal-2016
+A 3.2-kg neonate going on ECMO needs a circuit prime with red cells. What reduces the risk of hyperkalemic arrest?
+- [ ] Irradiate the units days in advance
+- [x] Fresh units (< 5–7 days), irradiated within 24 h of use or washed
+- [ ] Use the oldest units available
+- [ ] Add potassium-free saline only
+> Potassium leaks from stored red cells, faster after irradiation. Large-volume transfusion relative to neonatal blood volume can cause fatal hyperkalemia.
+:::
+
+:::check peds #severe-chronic-anemia sec=peds-dosing refs=aap-iron-2026
+A 2-year-old with nutritional iron deficiency has Hb 3.8 g/dL, HR 160, mild hepatomegaly and a gallop rhythm. Transfusion is needed. How should it be given?
+- [ ] 20 mL/kg over 1 hour
+- [x] Small aliquots slowly (e.g., ~5 mL/kg over 3–4 h, ± diuretic), with close monitoring, then oral iron
+- [ ] Exchange transfusion is mandatory
+- [ ] No transfusion; IV iron only
+> In chronic severe anemia the circulation is volume-expanded and near failure. Rapid volume precipitates heart failure. Correct partially and slowly, then treat the cause.
+:::

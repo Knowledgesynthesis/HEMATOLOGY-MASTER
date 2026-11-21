@@ -97,5 +97,9 @@ describe('content integrity', () => {
     const peds = s.filter((x) => x.pop === 'peds').length
     const adult = s.filter((x) => x.pop === 'adult').length
     expect(peds).toBeGreaterThan(adult)
+    const qs = allQuestions()
+    expect(qs.filter((q) => q.pop === 'peds').length).toBeGreaterThan(qs.length / 2)
+    const cases = allCases()
+    expect(cases.filter((c) => c.pop === 'peds').length).toBeGreaterThan(cases.length / 2)
   })
 })

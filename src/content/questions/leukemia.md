@@ -69,3 +69,57 @@ On day 6 of ATRA + arsenic for APL, a patient develops fever, dyspnea, bilateral
 - [ ] Platelet transfusion
 > This is differentiation syndrome. Dexamethasone (adults 10 mg IV q12h) at the first signs reduces mortality. Hold differentiating agents temporarily if severe, and treat infection in parallel if suspected.
 :::
+
+:::check peds #infant-all sec=all-peds refs=who-haem5-lymphoid
+A 4-month-old has WBC 380 × 10⁹/L, hepatosplenomegaly and CNS involvement. Flow cytometry shows CD10-negative pro-B lymphoblasts. Which genetic finding is most likely, and what does it mean for prognosis?
+- [ ] ETV6::RUNX1; excellent prognosis
+- [ ] High hyperdiploidy; excellent prognosis
+- [x] KMT2A rearrangement; poor prognosis, requiring infant-specific protocols
+- [ ] BCR::ABL1; treated with steroids alone
+> Infant ALL is KMT2A-rearranged in ~75–80% of cases and has historically poor outcomes. Adding blinatumomab and menin-inhibitor approaches are improving results.
+:::
+
+:::check peds #ds-all sec=all-peds
+A 5-year-old with Down syndrome is diagnosed with B-ALL. Which statement is correct?
+- [ ] Outcomes and toxicity are identical to other children
+- [x] They have more treatment toxicity (infections, mucositis, methotrexate toxicity), so protocols modify doses and supportive care
+- [ ] ALL is rarer in Down syndrome than in the general population
+- [ ] They should receive cranial radiation routinely
+> Children with Down syndrome have a ~10–20× higher ALL risk and higher treatment-related mortality, mainly infection. Protocols include specific modifications.
+:::
+
+:::check peds #asparaginase-pancreatitis sec=all-peds
+During ALL therapy after pegaspargase, a 12-year-old develops severe epigastric pain radiating to the back. Lipase is 1,400 U/L. What is the most likely cause?
+- [ ] Steroid-induced gastritis
+- [x] Asparaginase-associated pancreatitis
+- [ ] Vincristine ileus
+- [ ] Methotrexate hepatotoxicity
+> Pancreatitis is a classic asparaginase toxicity, along with thrombosis (including CSVT), hypersensitivity, hyperglycemia and liver injury. Severe pancreatitis usually ends further asparaginase.
+:::
+
+:::check peds #aml-clues sec=aml-peds
+Which presentation favors AML over ALL in a teenager with new pancytopenia and circulating blasts?
+- [ ] Mediastinal mass
+- [x] Gingival hypertrophy and DIC
+- [ ] Bone pain
+- [ ] TdT-positive blasts
+> Gingival or skin infiltration (monocytic subtypes), chloromas and coagulopathy (APL, monocytic) point to AML. Mediastinal masses and TdT positivity favor lymphoblastic disease.
+:::
+
+:::check peds #cml-growth sec=cml refs=eln-cml-2020
+A 9-year-old with chronic-phase CML is in major molecular response on imatinib. Which pediatric-specific monitoring matters most?
+- [ ] Annual bone marrow
+- [x] Linear growth (height velocity) and pubertal development
+- [ ] Monthly echocardiogram
+- [ ] Weekly CBC indefinitely
+> TKIs inhibit growth-plate signaling, and prepubertal children can lose height potential. Discuss dosing strategies and treatment-free remission eligibility with pediatric CML experts.
+:::
+
+:::check peds #tls-phos sec=emergencies
+Which phosphate level meets the Cairo-Bishop laboratory TLS criterion in children?
+- [ ] ≥ 4.5 mg/dL
+- [x] ≥ 6.5 mg/dL
+- [ ] ≥ 3.0 mg/dL
+- [ ] ≥ 10 mg/dL
+> Children have higher normal phosphate, so the threshold is ≥ 6.5 mg/dL (≥ 4.5 in adults). Lab TLS needs ≥ 2 of: uric acid ≥ 8, K ≥ 6, phosphate threshold, Ca ≤ 7 mg/dL.
+:::
